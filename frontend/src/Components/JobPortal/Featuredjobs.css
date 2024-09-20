@@ -39,7 +39,7 @@
     background: linear-gradient(135deg, #4a90e2, #50e3c2); 
     background-size: 200% 200%;
     background-color: #E6F7F9;
-    animation: gradientAnimation 10s ease infinite; 
+    animation: gradientAnimation 10s ease infinite; /* Animation Properties */
     position: relative; 
   }
   
@@ -111,6 +111,7 @@
     padding: 10px;
     border-radius: 0 0 10px 10px;
     color: #333;
+    height: 60px;
   }
   
   .company-info {

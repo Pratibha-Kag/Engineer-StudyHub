@@ -1,6 +1,7 @@
 import React from "react";
 import { Input, Button, Card } from "antd";
 import "./JobPortal.css"; // Ensure this CSS file includes the styles below
+import FeaturedJobs from "./Featuredjobs";
 
 const { Search } = Input;
 
@@ -101,6 +102,7 @@ function JobPortal() {
         ))}
       </main>
       <div className="thread-animation"></div>
+      <FeaturedJobs/>
     </div>
   );
 }

@@ -1,14 +1,17 @@
 import React from "react"
 import "./Featuredjobs.css";
-
+import {useNavigate} from "react-router-dom";
 
 const FeaturedJobs = (job) => {
+    const navigate = useNavigate();
+
+   
     const FeaturedJobCards = [
         {
             id: 1,
             package: '15 - 30 LPA',
             location: 'Bangalore Urban',
-            title: 'Software Development  - II',
+            title: 'Software Development ',
             tags: ['#DSA', '#Problem solving'],
             company: 'Grow',
             views: 1251,
@@ -19,7 +22,7 @@ const FeaturedJobs = (job) => {
             id: 2,
             package: '5 - 12 LPA',
             location: 'Bangalore Urban',
-            title: ' Associate Software Developer',
+            title: ' Data Science  Engineer',
             tags: ['#API', '#React', '#.NET'],
             company: 'Anthology',
             views: 2092,
@@ -64,13 +67,16 @@ const FeaturedJobs = (job) => {
             package: '4.5 - 10 LPA',
             location: 'Noida',
             title: 'Jr. Node.js Developer',
-            tags: ['#html/css', '#javascript', '#mongodb', "#nodejs"],
+            tags: ['#html/css', '#javascript', '#mongodb'],
             company: 'Excellence Technologies',
             views: 2042,
             logo:require("../../assets/images/excellence.png"),
             buttonColor: '#B2FF87'
           },
     ]
+    const handleViewClick = (id) => {
+        navigate(`/job/${id}`);
+       }
     return (
         <div className="job-container">
         <h5 className="header">Featured Jobs</h5>
@@ -92,7 +98,7 @@ const FeaturedJobs = (job) => {
                   <img src={job.logo} alt={`${job.company} logo`} className="company-logo" />
                   <p className="company-name">{job.company}</p>
                 </div>
-                <button className="view-btn">View</button>
+                <button className="view-btn" onClick={() => handleViewClick(job.id)}>View</button>
               </div>
               <p className="views">👁️ {job.views}</p>
             </div>
